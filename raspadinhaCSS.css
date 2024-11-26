@@ -1,31 +1,75 @@
+.leckerli-one-regular {
+  font-family: "Leckerli One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .container {
-    text-align: center;
-  }
+  text-align: center;
+  display: flex; /* Adiciona Flexbox */
+  flex-direction: column;
+  justify-content: start; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Faz com que o container ocupe toda a altura da tela */
+}
+
+
+body {
+  background-image: url(detailed-hand-painted-watercolour-texture-background_1048-20008.jpg);
+  background-color: pink;
+  background-position: center;
+  background-size: 250%;
+}
   
-  .raspadinha {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    background-color: #e0e0e0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-  }
+.raspadinha {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #4272bb;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+h1 {
+  margin: 50px;
+  font-family: "Leckerli One", cursive;
+  color: #4272bb;
+  font-size: 50px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+h2 {
+  font-family: "Pacifico", cursive;
+  color: black;
+  text-shadow: -1px 0 #df4fc0, 0 1px #df4fc0,
+  1px 0 #df4fc0, 0 -1px #df4fc0;
+  font-size: 2em;
+}
   
-  .circulo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #ccc;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 24px;
-  }
+.circulo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #df4fc0;
+  display: flex;  /* Ativa o Flexbox */
+  align-items: center;  /* Centraliza verticalmente */
+  justify-content: center;  /* Centraliza horizontalmente */
+  position: relative;  /* Necessário para o posicionamento absoluto, caso queira */
+  overflow: hidden;  /* Garante que o texto não saia do círculo */
+}
+
+.texto {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;  /* Garante que o texto se alinhe ao centro */
+}

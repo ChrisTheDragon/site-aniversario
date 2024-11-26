@@ -1,0 +1,71 @@
+/* style.css */
+.leckerli-one-regular {
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    background-image: url(gradient-pastel-sky-background_23-2148917405.jpeg);
+    background-size: 300%;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 50px;
+    font-family: Leckerli One;
+    margin: 5px;
+}
+
+#T1 {
+    color: #e474ba;
+}
+
+#T2 {
+    color: #5881ff;
+}
+
+#T3 {
+    color: #bea1eb;
+}
+
+.texto {
+    font-size: 20px;
+    color: #666;
+    font-family: "Pacifico", cursive;
+}
+
+.botao {
+    width: 283px;
+    height: 50px;
+    border-radius: 30px;
+    background: #FBB3F1;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.botao:hover {
+    background-color: #e474ba;
+}

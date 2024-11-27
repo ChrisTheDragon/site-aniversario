@@ -111,11 +111,6 @@ function exibirMensagemParabens() {
   mensagem.style.fontFamily = 'Pacifico, cursive';
 
   document.body.appendChild(mensagem);
-
-  // Opcional: Remover a mensagem após alguns segundos
-  setTimeout(() => {
-    mensagem.remove();
-  }, 3000);
 }
 
 

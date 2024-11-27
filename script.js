@@ -41,7 +41,7 @@ function criarCirculo(texto) {
     const textoElemento = circulo.querySelector('.texto');
     
     // Estilizando a cor do texto
-    textoElemento.style.color = '#fff';  // Define a cor do texto como um tom de vermelho (#FF6347)
+    textoElemento.style.color = '#df4fc0';  // Define a cor do texto como um tom de vermelho (#FF6347)
   });
   
 }
@@ -55,10 +55,17 @@ for (let i = 0; i < 9; i++) {
 
 
 
-// Funcionalidade de raspar (simplificada)
+// Funcionalidade de raspar (atualizada para mudar a cor do texto)
 const circulos = document.querySelectorAll('.circulo');
+
 circulos.forEach(circulo => {
   circulo.addEventListener('mousedown', () => {
     circulo.style.backgroundColor = 'transparent'; // Raspa o círculo, deixando o prêmio visível
+    
+    const textoElemento = circulo.querySelector('.texto'); // Seleciona o elemento de texto dentro do círculo
+    if (textoElemento) {
+      textoElemento.style.color = 'white'; // Muda a cor do texto para branco
+    }
   });
 });
+

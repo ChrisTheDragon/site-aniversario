@@ -58,14 +58,27 @@ for (let i = 0; i < 9; i++) {
 // Funcionalidade de raspar (atualizada para mudar a cor do texto)
 const circulos = document.querySelectorAll('.circulo');
 
+let cliques = 0; // Contador de círculos clicados
+const totalCirculos = circulos.length; // Total de círculos
+
 circulos.forEach(circulo => {
   circulo.addEventListener('mousedown', () => {
-    circulo.style.backgroundColor = 'transparent'; // Raspa o círculo, deixando o prêmio visível
-    circulo.style.border = '2px solid pink'; // Define a cor e a espessura da borda
-    
-    const textoElemento = circulo.querySelector('.texto');
-    if (textoElemento) {
-      textoElemento.style.color = 'white'; // Muda a cor do texto para branco
+    if (!circulo.classList.contains('clicado')) { // Verifica se o círculo já foi clicado
+      circulo.style.backgroundColor = 'transparent'; // Raspa o círculo, deixando o prêmio visível
+      
+      const textoElemento = circulo.querySelector('.texto');
+      if (textoElemento) {
+        textoElemento.style.color = 'white'; // Muda a cor do texto para branco
+      }
+
+      circulo.style.border = '2px solid pink'; // Adiciona uma borda rosa
+      circulo.classList.add('clicado'); // Marca o círculo como clicado
+      cliques++; // Incrementa o contador de cliques
+
+      // Verifica se todos os círculos foram clicados
+      if (cliques === totalCirculos) {
+        exibirMensagemParabens(); // Chama a função para exibir a mensagem
+      }
     }
 
     // Adiciona a classe de animação
@@ -78,4 +91,28 @@ circulos.forEach(circulo => {
   });
 });
 
+// Função para exibir a mensagem de parabéns
+function exibirMensagemParabens() {
+  const mensagem = document.createElement('div');
+  mensagem.textContent = 'Parabéns meu Amor! Você ganhou todos os prêmios!!! Retorne ao seu namorado para retira-los';
+  mensagem.style.position = 'fixed';
+  mensagem.style.top = '50%';
+  mensagem.style.left = '50%';
+  mensagem.style.transform = 'translate(-50%, -50%)';
+  mensagem.style.padding = '20px';
+  mensagem.style.backgroundColor = '#df4fc0';
+  mensagem.style.color = 'white';
+  mensagem.style.fontSize = '24px';
+  mensagem.style.fontWeight = 'bold';
+  mensagem.style.border = '2px solid white';
+  mensagem.style.borderRadius = '10px';
+  mensagem.style.textAlign = 'center';
+  mensagem.style.zIndex = '1000';
 
+  document.body.appendChild(mensagem);
+
+  // Opcional: Remover a mensagem após alguns segundos
+  setTimeout(() => {
+    mensagem.remove();
+  }, 3000);
+}

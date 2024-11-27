@@ -66,6 +66,7 @@ h2 {
   justify-content: center;  /* Centraliza horizontalmente */
   position: relative;  /* Necessário para o posicionamento absoluto, caso queira */
   overflow: hidden;  /* Garante que o texto não saia do círculo */
+  transition: border 0.3s ease-in-out;
 }
 
 .texto {

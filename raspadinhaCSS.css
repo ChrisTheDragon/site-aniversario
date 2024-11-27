@@ -73,3 +73,16 @@ h2 {
   font-size: 16px;
   text-align: center;  /* Garante que o texto se alinhe ao centro */
 }
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circulo.girando {
+  animation: girar 0.5s ease-in-out;
+}

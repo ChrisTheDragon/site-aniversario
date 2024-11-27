@@ -61,11 +61,21 @@ const circulos = document.querySelectorAll('.circulo');
 circulos.forEach(circulo => {
   circulo.addEventListener('mousedown', () => {
     circulo.style.backgroundColor = 'transparent'; // Raspa o círculo, deixando o prêmio visível
+    circulo.style.border = '2px solid pink'; // Define a cor e a espessura da borda
     
-    const textoElemento = circulo.querySelector('.texto'); // Seleciona o elemento de texto dentro do círculo
+    const textoElemento = circulo.querySelector('.texto');
     if (textoElemento) {
       textoElemento.style.color = 'white'; // Muda a cor do texto para branco
     }
+
+    // Adiciona a classe de animação
+    circulo.classList.add('girando');
+
+    // Remove a classe após a animação terminar
+    circulo.addEventListener('animationend', () => {
+      circulo.classList.remove('girando');
+    }, { once: true }); // Ouvinte de evento dispara apenas uma vez
   });
 });
+
 

@@ -2,15 +2,15 @@ const raspadinhaContainer = document.querySelector('.raspadinha');
 
 // Lista de prêmios
 const premios = [
-  'Você ganhou um presente!',
+  'Um produto do seu carrinho Shien',
   'Mais um beijo!',
-  'Uma surpresa especial!',
-  'Feliz Aniversário!',
-  'Um dia de spa!',
+  'Uma caixa de bombons',
+  'Meu amor eterno',
+  'Um dia de princesa no shopping',
   'Uma noite romântica!',
-  'Um jantar surpresa!',
+  'Um jantar Especial feito por mim!',
   'Um fim de semana incrível!',
-  'Aproveite seu dia!'
+  'Um presente aleatorio da shopee!'
 ];
 
 // Função para criar um círculo
@@ -101,13 +101,14 @@ function exibirMensagemParabens() {
   mensagem.style.transform = 'translate(-50%, -50%)';
   mensagem.style.padding = '20px';
   mensagem.style.backgroundColor = '#df4fc0';
-  mensagem.style.color = 'white';
+  mensagem.style.color = '#fff';
   mensagem.style.fontSize = '24px';
   mensagem.style.fontWeight = 'bold';
   mensagem.style.border = '2px solid white';
   mensagem.style.borderRadius = '10px';
   mensagem.style.textAlign = 'center';
   mensagem.style.zIndex = '1000';
+  mensagem.style.fontFamily = 'Pacifico, cursive';
 
   document.body.appendChild(mensagem);
 
@@ -116,3 +117,9 @@ function exibirMensagemParabens() {
     mensagem.remove();
   }, 3000);
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const audio = document.querySelector('audio');
+  audio.volume = 1.0; // Define o volume
+});

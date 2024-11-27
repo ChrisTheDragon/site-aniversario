@@ -104,11 +104,19 @@ function exibirMensagemParabens() {
   mensagem.style.color = '#fff';
   mensagem.style.fontSize = '24px';
   mensagem.style.fontWeight = 'bold';
-  mensagem.style.border = '2px solid white';
+  mensagem.style.border = '2px solid black';
   mensagem.style.borderRadius = '10px';
   mensagem.style.textAlign = 'center';
   mensagem.style.zIndex = '1000';
   mensagem.style.fontFamily = 'Pacifico, cursive';
+
+  // Adiciona borda preta ao texto
+  mensagem.style.textShadow = `
+    -1px -1px 0 black, /* Sombra no canto superior esquerdo */
+    1px -1px 0 black,  /* Sombra no canto superior direito */
+    -1px 1px 0 black,  /* Sombra no canto inferior esquerdo */
+    1px 1px 0 black    /* Sombra no canto inferior direito */
+  `;
 
   document.body.appendChild(mensagem);
 }
